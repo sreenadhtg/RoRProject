@@ -1,0 +1,9 @@
+ 
+<% form_for :user, @user, :url => { :action => "login" } do |f| %>
+ 
+  Username: <%= f.text_field :username %><br/>
+  Password: <%= f.password_field :password %><br/>
+  <%= submit_tag ('Login') %>
+  <%= flash[:notice]%> <br/>
+  <%=  link_to "SignUp", :controller => "user", :action => "register" %>
+<% end %>
